@@ -34,11 +34,11 @@ const footerCols = [
 export default function Footer() {
   return (
     <footer className="bg-bg-deeper">
-      <div className="max-w-[1440px] mx-auto px-8 md:px-20 py-15">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 py-12 lg:py-16">
         {/* Top */}
-        <div className="flex flex-col md:flex-row gap-15">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           {/* Brand */}
-          <div className="flex flex-col gap-4 md:w-[350px] shrink-0">
+          <div className="flex flex-col gap-4 lg:w-[350px] shrink-0">
             <Link to="/" className="text-text-white text-2xl font-bold tracking-[3px] no-underline">
               ACELLIQ
             </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Columns */}
-          <div className="flex flex-1 flex-wrap gap-10 md:gap-15">
+          <div className="flex flex-1 flex-wrap gap-10 lg:gap-16">
             {footerCols.map((col) => (
               <div key={col.title} className="flex flex-col gap-4 min-w-[140px] flex-1">
                 <h4 className="text-text-white text-sm font-semibold">{col.title}</h4>
@@ -77,7 +77,7 @@ export default function Footer() {
         <div className="h-px bg-border-subtle my-12" />
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-text-muted text-xs">&copy; 2026 ACELLIQ. All rights reserved.</p>
           <p className="text-text-muted text-xs">Digital Agency Solutions</p>
         </div>

@@ -5,11 +5,15 @@ export const projects = [
     category: 'Web Apps',
     tagColor: 'bg-accent-teal/10 text-accent-teal',
     description: 'An integrated restaurant management platform with POS, digital menu ordering, inventory management, and staff scheduling — reducing order processing time by 36%.',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format',
+    image: '/images/generated-1773642478147.png',
+    cardStats: [
+      { text: '36% faster orders', color: 'text-accent-lime' },
+      { text: '87% CSAT', color: 'text-accent-teal' },
+    ],
     detail: {
       heroTitle: 'Restaurant POS System',
       heroCategory: 'Restaurant / Enterprise Software',
-      heroImage: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&auto=format',
+      heroImage: '/images/generated-1773642478147.png',
       challenge: 'RASRI Group operates 12 restaurant locations across Bangkok with different menu systems, manual order processing, and disconnected inventory management. Order errors averaged 15% and staff spent 3+ hours daily on manual reconciliation.',
       solution: 'We built a unified POS platform with real-time order syncing, digital menu management, automated inventory tracking, and a centralized analytics dashboard accessible across all locations.',
       stats: [
@@ -41,11 +45,15 @@ export const projects = [
     category: 'AI/ML',
     tagColor: 'bg-accent-lime/10 text-accent-lime',
     description: 'Transforms traditional farming into a data-driven, efficient, and sustainable ecosystem with seamless purchasing channels and flexible payment options.',
-    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&auto=format',
+    image: '/images/p2img.png',
+    cardStats: [
+      { text: 'Higher conversion', color: 'text-accent-lime' },
+      { text: 'Faster checkout', color: 'text-accent-teal' },
+    ],
     detail: {
       heroTitle: 'AgriFlow AI Platform',
       heroCategory: 'Agritech / AI & Machine Learning',
-      heroImage: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&auto=format',
+      heroImage: '/images/p2img.png',
       challenge: 'Thai farmers rely on outdated methods for crop management and market access, leading to 30% post-harvest losses and unpredictable income.',
       solution: 'An AI-powered platform that provides crop health monitoring, yield prediction, market price forecasting, and direct-to-consumer sales channels.',
       stats: [
@@ -77,11 +85,15 @@ export const projects = [
     category: 'Mobile Apps',
     tagColor: 'bg-accent-purple/10 text-accent-purple',
     description: 'Seamless banking with account management, fund transfers, bill payments, savings tools, and financial insights — all within a unified mobile experience.',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&auto=format',
+    image: '/images/generated-1773642522423.png',
+    cardStats: [
+      { text: 'Digital adoption +', color: 'text-accent-lime' },
+      { text: 'Simplified UX', color: 'text-accent-teal' },
+    ],
     detail: {
       heroTitle: 'Banking Application',
       heroCategory: 'Fintech / Mobile Banking',
-      heroImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=1200&auto=format',
+      heroImage: '/images/generated-1773642522423.png',
       challenge: 'Legacy banking apps with poor UX resulted in 60% user abandonment and rising customer support costs.',
       solution: 'A modern mobile banking experience with biometric auth, instant transfers, smart savings, and AI-powered spending insights.',
       stats: [
@@ -113,7 +125,11 @@ export const projects = [
     category: 'Web Apps',
     tagColor: 'bg-accent-pink/10 text-accent-pink',
     description: 'QR code-based digital menu ordering system. Orders go directly to kitchen POS with complete digital payment — boosting efficiency and scalability.',
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format',
+    image: '/images/generated-1773642606440.png',
+    cardStats: [
+      { text: 'Higher efficiency', color: 'text-accent-lime' },
+      { text: 'Data-driven sales', color: 'text-accent-teal' },
+    ],
     detail: null,
   },
   {
@@ -122,7 +138,11 @@ export const projects = [
     category: 'Web Apps',
     tagColor: 'bg-accent-teal/10 text-accent-teal',
     description: 'Enabling organizations to operate smarter through integrated, data-driven solutions with real-time monitoring dashboards and analytics.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format',
+    image: '/images/generated-1773642630426.png',
+    cardStats: [
+      { text: 'Real-time insights', color: 'text-accent-lime' },
+      { text: 'Reduced costs', color: 'text-accent-teal' },
+    ],
     detail: null,
   },
   {
@@ -131,7 +151,11 @@ export const projects = [
     category: 'E-commerce',
     tagColor: 'bg-accent-lime/10 text-accent-lime',
     description: 'Digital commerce solution enabling customers to browse, purchase, and receive groceries conveniently — removing time and location barriers.',
-    image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&auto=format',
+    image: '/images/generated-1773642662323.png',
+    cardStats: [
+      { text: 'Customer reach +', color: 'text-accent-lime' },
+      { text: 'Revenue growth', color: 'text-accent-teal' },
+    ],
     detail: null,
   },
 ]
