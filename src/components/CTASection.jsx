@@ -4,10 +4,9 @@ import { ArrowRight } from 'lucide-react'
 export default function CTASection() {
   return (
     <section className="relative overflow-hidden">
-      {/* Radial gradient background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#1A2A3A_0%,#1A1E2A_100%)]" />
-      <div className="relative max-w-[1440px] mx-auto px-8 md:px-30 py-20 flex flex-col items-center gap-6 text-center">
-        <h2 className="text-text-white text-3xl md:text-[42px] font-bold">
+      <div className="relative max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 py-16 lg:py-24 flex flex-col items-center gap-6 text-center">
+        <h2 className="text-text-white text-3xl lg:text-[42px] font-bold">
           Ready to Transform Your Business?
         </h2>
         <p className="text-text-muted text-base leading-relaxed max-w-[600px]">
