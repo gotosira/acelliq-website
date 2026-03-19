@@ -26,8 +26,8 @@ export default function Works() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-6">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-6">
           <span className="bg-bg-card border border-border-subtle rounded-full px-4 py-2 text-accent-lime text-[11px] font-bold tracking-[2px]">
             OUR PORTFOLIO
           </span>
@@ -40,7 +40,7 @@ export default function Works() {
       </section>
 
       {/* Filter Tabs */}
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-wrap items-center justify-center gap-3">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-wrap items-center justify-center gap-3">
         {filters.map((f) => (
           <button
             key={f}
@@ -58,7 +58,7 @@ export default function Works() {
 
       {/* Project Grid */}
       <section className="py-12 lg:py-16">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((p) => (
               <Link key={p.slug} to={`/works/${p.slug}`} className="rounded-xl bg-bg-card border border-border-subtle overflow-hidden flex flex-col no-underline group">
@@ -86,7 +86,7 @@ export default function Works() {
 
       {/* Stats */}
       <section className="bg-bg-card py-16">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col sm:flex-row items-center justify-between gap-8">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col sm:flex-row items-center justify-between gap-8">
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col items-center gap-2 flex-1">
               <span className={`${s.color} text-5xl font-bold tracking-tight`}>{s.value}</span>
@@ -97,8 +97,8 @@ export default function Works() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-12">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-4">
             <span className="bg-bg-card border border-border-subtle rounded-full px-4 py-2 text-accent-lime text-[11px] font-bold tracking-[2px]">
               CLIENT TESTIMONIALS
