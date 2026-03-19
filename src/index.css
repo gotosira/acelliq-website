@@ -1,23 +1,30 @@
+/* Editorial font pairing: Instrument Serif (display) + Outfit (body) */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
-@import "@fontsource/inter/800.css";
 
 @theme {
-  --color-bg-dark: #1A1E2A;
-  --color-bg-card: #232838;
-  --color-bg-deeper: #0F1520;
-  --color-border-subtle: #2E3448;
-  --color-text-white: #FFFFFF;
-  --color-text-muted: #A0A8C0;
-  --color-text-dim: #8892B0;
-  --color-accent-lime: #F4FF01;
-  --color-accent-teal: #12F2CD;
-  --color-accent-purple: #690BE5;
-  --color-accent-pink: #EA10AC;
-  --font-sans: "Inter", system-ui, sans-serif;
+  /* ── Surface ── */
+  --color-bg-dark: #08090E;
+  --color-bg-card: #11131A;
+  --color-bg-deeper: #050607;
+  --color-bg-elevated: #181B24;
+  --color-border-subtle: #1E2230;
+  --color-border-hover: #2A2F3E;
+
+  /* ── Text ── warm ivory instead of pure white */
+  --color-text-white: #F0ECE5;
+  --color-text-muted: #8B8E9B;
+  --color-text-dim: #5C5F6E;
+
+  /* ── Accents ── */
+  --color-accent-lime: #CAFF04;
+  --color-accent-teal: #5AEDC6;
+  --color-accent-pink: #FF3D6E;
+
+  /* ── Typography ── */
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
 }
 
 * {
@@ -32,8 +39,20 @@ html {
 
 body {
   font-family: var(--font-sans);
+  font-weight: 400;
   background-color: var(--color-bg-dark);
   color: var(--color-text-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility for serif headings */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Subtle dot grid background texture */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, #1E2230 1px, transparent 1px);
+  background-size: 32px 32px;
 }

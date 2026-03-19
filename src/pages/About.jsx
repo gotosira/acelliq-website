@@ -10,7 +10,7 @@ const mvvCards = [
 const team = [
   { name: 'Marcus Chen', role: 'CEO & Founder', color: 'text-accent-lime', bio: '15+ years in tech leadership. Previously VP of Product at a Fortune 500.' },
   { name: 'Sarah Nakamura', role: 'CTO', color: 'text-accent-teal', bio: 'Ex-Google engineer. Architect of scalable systems serving millions of users globally.' },
-  { name: 'David Park', role: 'Design Director', color: 'text-accent-purple', bio: 'Award-winning designer with a passion for crafting intuitive, beautiful digital experiences.' },
+  { name: 'David Park', role: 'Design Director', color: 'text-accent-teal', bio: 'Award-winning designer with a passion for crafting intuitive, beautiful digital experiences.' },
   { name: 'Lisa Wong', role: 'Head of AI', color: 'text-accent-pink', bio: 'PhD in Machine Learning. Built AI systems processing 10M+ data points daily.' },
   { name: 'James Rivera', role: 'Lead Engineer', color: 'text-accent-teal', bio: 'Full-stack architect with deep expertise in cloud-native, event-driven systems.' },
   { name: 'Mia Tanaka', role: 'UX Lead', color: 'text-accent-lime', bio: 'Human-centered design advocate. Led UX for products used by 5M+ people worldwide.' },
@@ -19,7 +19,7 @@ const team = [
 const stats = [
   { value: '200+', color: 'text-accent-lime', label: 'Projects Delivered' },
   { value: '45+', color: 'text-accent-teal', label: 'Team Members' },
-  { value: '12+', color: 'text-accent-purple', label: 'Countries Served' },
+  { value: '12+', color: 'text-accent-teal', label: 'Countries Served' },
   { value: '98%', color: 'text-text-white', label: 'Client Satisfaction' },
 ]
 
@@ -33,12 +33,12 @@ export default function About() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-16 lg:py-20">
+      <section className="py-20 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-8">
-          <span className="bg-bg-card border border-border-subtle rounded-full px-5 py-2 text-accent-lime text-xs font-semibold tracking-[3px]">
+          <span className="text-accent-teal text-xs font-semibold tracking-widest">
             WHO WE ARE
           </span>
-          <h1 className="text-5xl lg:text-6xl font-bold text-center">About ACELLIQ</h1>
+          <h1 className="font-serif text-4xl lg:text-[52px] leading-[1.1] text-center">About <em className="text-accent-lime">ACELLIQ</em></h1>
           <p className="text-text-muted text-lg leading-[1.7] text-center max-w-[800px]">
             We are a forward-thinking digital product solutions company dedicated to transforming ambitious ideas into powerful, scalable technology. Since our founding, we've partnered with startups and enterprises alike to build products that drive real business growth.
           </p>
@@ -47,15 +47,15 @@ export default function About() {
       </section>
 
       {/* Mission Vision Values */}
-      <section className="py-16 lg:py-20">
+      <section className="py-20 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-4">
-            <span className="text-accent-lime text-xs font-semibold tracking-[3px]">OUR FOUNDATION</span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-center">Mission, Vision & Values</h2>
+            <span className="text-accent-teal text-xs font-semibold tracking-widest">OUR FOUNDATION</span>
+            <h2 className="font-serif text-4xl lg:text-[52px] leading-[1.1] text-center">Mission, Vision & <em className="text-accent-lime">Values</em></h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {mvvCards.map((card) => (
-              <div key={card.title} className="bg-bg-card border border-border-subtle rounded-2xl p-8 flex flex-col gap-4">
+              <div key={card.title} className="bg-bg-card border border-border-subtle rounded-2xl p-8 flex flex-col gap-4 hover:border-border-hover transition">
                 <div className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center`}>
                   <card.icon size={24} className={card.iconBg === 'bg-accent-purple' ? 'text-text-white' : 'text-bg-dark'} />
                 </div>
@@ -68,11 +68,11 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="bg-gradient-to-b from-bg-dark to-bg-deeper py-16 lg:py-20">
+      <section className="bg-bg-card border-y border-border-subtle py-20 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-4">
-            <span className="text-accent-lime text-xs font-semibold tracking-[3px]">THE TEAM</span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-center">Meet the Minds Behind ACELLIQ</h2>
+            <span className="text-accent-teal text-xs font-semibold tracking-widest">THE TEAM</span>
+            <h2 className="font-serif text-4xl lg:text-[52px] leading-[1.1] text-center">Meet the <em className="text-accent-lime">Minds</em> Behind ACELLIQ</h2>
             <p className="text-text-muted text-base leading-relaxed text-center max-w-[600px]">
               A diverse team of strategists, designers, and engineers united by a passion for building exceptional digital products.
             </p>
@@ -80,7 +80,7 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {team.map((m) => (
               <div key={m.name} className="flex flex-col items-center gap-4 pb-6">
-                <div className="rounded-2xl h-[280px] w-full bg-bg-card" />
+                <div className="rounded-2xl h-[280px] w-full bg-bg-elevated" />
                 <h3 className="text-lg font-bold text-center">{m.name}</h3>
                 <span className={`${m.color} text-[13px] font-semibold text-center`}>{m.role}</span>
                 <p className="text-text-muted text-[13px] leading-relaxed text-center">{m.bio}</p>
@@ -91,11 +91,11 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 lg:py-20">
+      <section className="py-20 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-4">
-            <span className="text-accent-lime text-xs font-semibold tracking-[3px]">OUR JOURNEY</span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-center">From Vision to Global Impact</h2>
+            <span className="text-accent-teal text-xs font-semibold tracking-widest">OUR JOURNEY</span>
+            <h2 className="font-serif text-4xl lg:text-[52px] leading-[1.1] text-center">From Vision to <em className="text-accent-teal">Global Impact</em></h2>
           </div>
           <div className="flex items-center gap-0 w-full justify-center">
             {milestones.map((ms, i) => (
@@ -112,7 +112,7 @@ export default function About() {
       </section>
 
       {/* Stats */}
-      <section className="bg-bg-card py-16">
+      <section className="bg-bg-card border-y border-border-subtle py-20 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col sm:flex-row gap-8">
           {stats.map((s, i) => (
             <div key={s.label} className={`flex-1 flex flex-col items-center gap-2 py-4 sm:py-0 ${i > 0 ? 'sm:border-l border-border-subtle' : ''}`}>
