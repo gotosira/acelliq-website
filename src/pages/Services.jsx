@@ -35,8 +35,8 @@ export default function Services() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-8">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-8">
           <div className="flex items-center gap-2 bg-bg-card border border-border-subtle rounded-full px-5 py-2">
             <div className="w-2 h-2 rounded-full bg-accent-lime" />
             <span className="text-accent-lime text-[11px] font-bold tracking-[2px]">DIGITAL PRODUCT SOLUTIONS</span>
@@ -50,8 +50,8 @@ export default function Services() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col gap-12">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col gap-12">
           <div className="flex flex-col gap-4">
             <span className="text-accent-teal text-[11px] font-bold tracking-[2px]">WHAT WE DO</span>
             <h2 className="text-3xl lg:text-[44px] font-extrabold tracking-tight">Services Overview</h2>
@@ -73,8 +73,8 @@ export default function Services() {
       </section>
 
       {/* Process */}
-      <section className="bg-bg-card py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col gap-12">
+      <section className="bg-bg-card py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col gap-12">
           <div className="flex flex-col gap-4">
             <span className="text-accent-lime text-[11px] font-bold tracking-[2px]">HOW WE WORK</span>
             <h2 className="text-3xl lg:text-[44px] font-extrabold tracking-tight">Our Process</h2>
@@ -96,8 +96,8 @@ export default function Services() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col gap-12">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col gap-12">
           <div className="flex flex-col gap-4">
             <span className="text-accent-purple text-[11px] font-bold tracking-[2px]">TECHNOLOGIES</span>
             <h2 className="text-3xl lg:text-[44px] font-extrabold tracking-tight">Our Tech Stack</h2>
@@ -114,8 +114,8 @@ export default function Services() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-bg-card py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col gap-12">
+      <section className="bg-bg-card py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col gap-12">
           <div className="flex flex-col items-center gap-4">
             <span className="text-accent-teal text-[11px] font-bold tracking-[2px]">FAQ</span>
             <h2 className="text-3xl lg:text-[44px] font-extrabold tracking-tight text-center">Frequently Asked Questions</h2>

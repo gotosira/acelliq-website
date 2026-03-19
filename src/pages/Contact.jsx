@@ -23,8 +23,8 @@ export default function Contact() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-6">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-6">
           <span className="border border-border-subtle rounded-full px-5 py-2 text-accent-teal text-xs font-semibold tracking-[2px]">
             LET'S BUILD SOMETHING GREAT
           </span>
@@ -38,7 +38,7 @@ export default function Contact() {
 
       {/* Contact Section */}
       <section className="py-12 lg:py-16">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Form */}
             <div className="flex-1 flex flex-col gap-6">
@@ -128,7 +128,7 @@ export default function Contact() {
 
       {/* Map */}
       <section className="py-12 lg:py-16">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
               <h2 className="text-[28px] font-bold">Find Us Here</h2>
@@ -144,8 +144,8 @@ export default function Contact() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
           <div className="flex flex-col items-center gap-10">
             <div className="flex flex-col items-center gap-4">
               <h2 className="text-3xl lg:text-4xl font-bold text-center">Frequently Asked Questions</h2>

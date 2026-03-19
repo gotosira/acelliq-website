@@ -33,8 +33,8 @@ export default function About() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-8">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-8">
           <span className="bg-bg-card border border-border-subtle rounded-full px-5 py-2 text-accent-lime text-xs font-semibold tracking-[3px]">
             WHO WE ARE
           </span>
@@ -47,8 +47,8 @@ export default function About() {
       </section>
 
       {/* Mission Vision Values */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-12">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-4">
             <span className="text-accent-lime text-xs font-semibold tracking-[3px]">OUR FOUNDATION</span>
             <h2 className="text-4xl lg:text-5xl font-bold text-center">Mission, Vision & Values</h2>
@@ -68,8 +68,8 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="bg-gradient-to-b from-bg-dark to-bg-deeper py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-12">
+      <section className="bg-gradient-to-b from-bg-dark to-bg-deeper py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-4">
             <span className="text-accent-lime text-xs font-semibold tracking-[3px]">THE TEAM</span>
             <h2 className="text-4xl lg:text-5xl font-bold text-center">Meet the Minds Behind ACELLIQ</h2>
@@ -91,8 +91,8 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-12">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-4">
             <span className="text-accent-lime text-xs font-semibold tracking-[3px]">OUR JOURNEY</span>
             <h2 className="text-4xl lg:text-5xl font-bold text-center">From Vision to Global Impact</h2>
@@ -113,7 +113,7 @@ export default function About() {
 
       {/* Stats */}
       <section className="bg-bg-card py-16">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col sm:flex-row gap-8">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col sm:flex-row gap-8">
           {stats.map((s, i) => (
             <div key={s.label} className={`flex-1 flex flex-col items-center gap-2 py-4 sm:py-0 ${i > 0 ? 'sm:border-l border-border-subtle' : ''}`}>
               <span className={`${s.color} text-5xl font-bold`}>{s.value}</span>

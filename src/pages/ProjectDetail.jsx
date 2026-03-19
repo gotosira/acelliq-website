@@ -25,7 +25,7 @@ export default function ProjectDetail() {
     <div className="pt-20">
       {/* Hero */}
       <section className="py-12 lg:py-16">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col gap-8">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col gap-8">
           <div className="flex items-center gap-2 text-[13px]">
             <Link to="/works" className="text-text-muted no-underline hover:text-text-white transition">Works</Link>
             <span className="text-border-subtle">/</span>
@@ -39,7 +39,7 @@ export default function ProjectDetail() {
       </section>
 
       {/* Hero Image */}
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
         <img
           src={d.heroImage}
           alt={d.heroTitle}
@@ -48,8 +48,8 @@ export default function ProjectDetail() {
       </div>
 
       {/* Overview */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col gap-12">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col gap-12">
           <div className="flex flex-col gap-3">
             <span className="text-accent-teal text-xs font-semibold tracking-[3px]">OVERVIEW</span>
             <h2 className="text-3xl lg:text-4xl font-bold">The Challenge & Solution</h2>
@@ -76,8 +76,8 @@ export default function ProjectDetail() {
       </section>
 
       {/* Features */}
-      <section className="bg-gradient-to-b from-bg-dark to-bg-deeper py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col gap-12">
+      <section className="bg-gradient-to-b from-bg-dark to-bg-deeper py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col gap-12">
           <div className="flex flex-col items-center gap-3">
             <span className="text-accent-lime text-xs font-semibold tracking-[3px]">KEY FEATURES</span>
             <h2 className="text-3xl lg:text-4xl font-bold text-center">What We Delivered</h2>
@@ -94,8 +94,8 @@ export default function ProjectDetail() {
       </section>
 
       {/* Tech Stack */}
-      <section className="bg-gradient-to-b from-bg-deeper to-bg-dark py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-12">
+      <section className="bg-gradient-to-b from-bg-deeper to-bg-dark py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-3">
             <span className="text-accent-lime text-xs font-semibold tracking-[3px]">TECH STACK</span>
             <h2 className="text-3xl lg:text-4xl font-bold text-center">Technologies Used</h2>
@@ -111,8 +111,8 @@ export default function ProjectDetail() {
       </section>
 
       {/* Testimonial */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center gap-12">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-12">
           <span className="text-accent-teal text-xs font-semibold tracking-[3px]">CLIENT FEEDBACK</span>
           <p className="text-text-white text-lg lg:text-[22px] font-medium leading-relaxed text-center max-w-[800px] italic">
             {d.testimonial.quote}
@@ -127,7 +127,7 @@ export default function ProjectDetail() {
       {/* Next Project */}
       {d.nextProject && (
         <Link to={`/works/${d.nextProject.slug}`} className="bg-bg-card no-underline block">
-          <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 py-12 lg:py-16 flex items-center justify-between">
+          <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-12 lg:py-16 flex items-center justify-between">
             <div className="flex flex-col gap-2">
               <span className="text-text-muted text-[11px] font-semibold tracking-[2px]">NEXT PROJECT</span>
               <span className="text-text-white text-2xl lg:text-[28px] font-bold">{d.nextProject.title}</span>
