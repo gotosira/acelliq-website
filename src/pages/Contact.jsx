@@ -23,35 +23,34 @@ export default function Contact() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-16 lg:py-20">
+      <section className="py-20 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-20 flex flex-col items-center gap-6">
-          <span className="border border-border-subtle rounded-full px-5 py-2 text-accent-teal text-xs font-semibold tracking-[2px]">
+          <span className="text-accent-teal text-xs font-semibold tracking-widest">
             LET'S BUILD SOMETHING GREAT
           </span>
-          <h1 className="text-5xl lg:text-7xl font-bold text-center">Get In Touch</h1>
+          <h1 className="font-serif text-4xl lg:text-[52px] leading-[1.1] text-center">Get In <em className="text-accent-lime">Touch</em></h1>
           <p className="text-text-muted text-lg leading-relaxed text-center max-w-[680px]">
             Ready to transform your digital presence? Let's discuss your project and explore how we can bring your vision to life.
           </p>
-          <div className="w-30 h-[3px] bg-accent-lime rounded-sm" />
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-12 lg:py-16">
+      <section className="py-20 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Form */}
             <div className="flex-1 flex flex-col gap-6">
-              <h2 className="text-[28px] font-bold">Send Us a Message</h2>
+              <h2 className="font-serif text-4xl lg:text-[52px] leading-[1.1]">Send Us a <em className="text-accent-teal">Message</em></h2>
               <p className="text-text-muted text-[15px] leading-relaxed">Fill out the form below and we'll get back to you within 24 hours.</p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <input type="text" placeholder="First Name" className="flex-1 bg-bg-card border border-border-subtle rounded-lg px-4 py-3 text-text-white text-sm outline-none focus:border-accent-lime transition" />
-                <input type="text" placeholder="Last Name" className="flex-1 bg-bg-card border border-border-subtle rounded-lg px-4 py-3 text-text-white text-sm outline-none focus:border-accent-lime transition" />
+                <input type="text" placeholder="First Name" className="flex-1 bg-bg-card border border-border-subtle rounded-full px-5 py-3 text-text-white text-sm outline-none focus:border-accent-lime transition" />
+                <input type="text" placeholder="Last Name" className="flex-1 bg-bg-card border border-border-subtle rounded-full px-5 py-3 text-text-white text-sm outline-none focus:border-accent-lime transition" />
               </div>
-              <input type="text" placeholder="Company Name" className="bg-bg-card border border-border-subtle rounded-lg px-4 py-3 text-text-white text-sm outline-none focus:border-accent-lime transition" />
+              <input type="text" placeholder="Company Name" className="bg-bg-card border border-border-subtle rounded-full px-5 py-3 text-text-white text-sm outline-none focus:border-accent-lime transition" />
               <div className="flex flex-col sm:flex-row gap-4">
-                <select className="flex-1 bg-bg-card border border-border-subtle rounded-lg px-4 py-3 text-text-muted text-sm outline-none focus:border-accent-lime transition appearance-none cursor-pointer">
+                <select className="flex-1 bg-bg-card border border-border-subtle rounded-full px-5 py-3 text-text-muted text-sm outline-none focus:border-accent-lime transition appearance-none cursor-pointer">
                   <option>Select Service</option>
                   <option>Custom Software</option>
                   <option>Mobile App</option>
@@ -59,7 +58,7 @@ export default function Contact() {
                   <option>AI & ML</option>
                   <option>UI/UX Design</option>
                 </select>
-                <select className="flex-1 bg-bg-card border border-border-subtle rounded-lg px-4 py-3 text-text-muted text-sm outline-none focus:border-accent-lime transition appearance-none cursor-pointer">
+                <select className="flex-1 bg-bg-card border border-border-subtle rounded-full px-5 py-3 text-text-muted text-sm outline-none focus:border-accent-lime transition appearance-none cursor-pointer">
                   <option>Budget Range</option>
                   <option>$10K - $25K</option>
                   <option>$25K - $50K</option>
@@ -67,19 +66,19 @@ export default function Contact() {
                   <option>$100K+</option>
                 </select>
               </div>
-              <textarea rows={5} placeholder="Tell us about your project..." className="bg-bg-card border border-border-subtle rounded-lg px-4 py-3 text-text-white text-sm outline-none focus:border-accent-lime transition resize-none" />
-              <button className="bg-accent-lime text-bg-dark font-semibold h-[52px] rounded-lg hover:brightness-110 transition cursor-pointer text-base">
+              <textarea rows={5} placeholder="Tell us about your project..." className="bg-bg-card border border-border-subtle rounded-2xl px-5 py-3 text-text-white text-sm outline-none focus:border-accent-lime transition resize-none" />
+              <button className="bg-accent-lime text-bg-dark font-semibold h-[52px] rounded-full hover:brightness-110 transition cursor-pointer text-base">
                 Send Message
               </button>
             </div>
 
             {/* Info Cards */}
             <div className="w-full lg:w-[420px] flex flex-col gap-8">
-              <div className="bg-bg-card rounded-xl p-8 flex flex-col gap-7">
+              <div className="bg-bg-card border border-border-subtle rounded-2xl p-8 flex flex-col gap-7 hover:border-border-hover transition">
                 <h3 className="text-lg font-bold">Contact Information</h3>
                 {contactInfo.map((item) => (
                   <div key={item.label} className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-accent-lime/10 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-accent-lime/10 flex items-center justify-center">
                       <item.icon size={18} className="text-accent-lime" />
                     </div>
                     <div>
@@ -90,7 +89,7 @@ export default function Contact() {
                 ))}
               </div>
 
-              <div className="bg-bg-card rounded-xl p-8 flex flex-col gap-5">
+              <div className="bg-bg-card border border-border-subtle rounded-2xl p-8 flex flex-col gap-5 hover:border-border-hover transition">
                 <div className="flex items-center gap-3">
                   <Clock size={18} className="text-accent-teal" />
                   <h3 className="text-lg font-bold">Office Hours</h3>
@@ -111,7 +110,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-bg-card rounded-xl p-8 flex flex-col gap-5">
+              <div className="bg-bg-card border border-border-subtle rounded-2xl p-8 flex flex-col gap-5 hover:border-border-hover transition">
                 <h3 className="text-lg font-bold">Follow Us</h3>
                 <div className="flex gap-3">
                   {[Twitter, Linkedin, Github].map((Icon, i) => (
@@ -127,14 +126,14 @@ export default function Contact() {
       </section>
 
       {/* Map */}
-      <section className="py-12 lg:py-16">
+      <section className="py-20 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-              <h2 className="text-[28px] font-bold">Find Us Here</h2>
+              <h2 className="font-serif text-4xl lg:text-[52px] leading-[1.1]">Find Us <em className="text-accent-teal">Here</em></h2>
               <span className="text-accent-teal text-[13px] font-medium">Bangkok, Thailand</span>
             </div>
-            <div className="bg-bg-card border border-border-subtle rounded-xl h-[320px] flex flex-col items-center justify-center gap-3">
+            <div className="bg-bg-card border border-border-subtle rounded-2xl h-[320px] flex flex-col items-center justify-center gap-3">
               <MapPin size={48} className="text-border-subtle" />
               <span className="text-text-muted text-sm font-medium">Interactive Map</span>
               <span className="text-text-dim text-xs">Google Maps integration goes here</span>
@@ -144,11 +143,12 @@ export default function Contact() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 lg:py-20">
+      <section className="bg-bg-card border-y border-border-subtle py-20 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
           <div className="flex flex-col items-center gap-10">
             <div className="flex flex-col items-center gap-4">
-              <h2 className="text-3xl lg:text-4xl font-bold text-center">Frequently Asked Questions</h2>
+              <span className="text-accent-teal text-xs font-semibold tracking-widest">FAQ</span>
+              <h2 className="font-serif text-4xl lg:text-[52px] leading-[1.1] text-center">Frequently Asked <em className="text-accent-lime">Questions</em></h2>
               <p className="text-text-muted text-base text-center">Everything you need to know about working with us</p>
             </div>
             <div className="flex flex-col gap-3 w-full max-w-[800px]">
@@ -156,7 +156,7 @@ export default function Contact() {
                 <button
                   key={i}
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="bg-bg-card rounded-xl px-6 py-5 flex flex-col text-left cursor-pointer border-none w-full"
+                  className="bg-bg-elevated rounded-2xl px-6 py-5 flex flex-col text-left cursor-pointer border border-border-subtle hover:border-border-hover transition w-full"
                 >
                   <div className="flex items-center justify-between w-full">
                     <span className="text-text-white text-sm font-medium">{faq.q}</span>

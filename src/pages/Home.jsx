@@ -1,122 +1,109 @@
 import { Link } from 'react-router-dom'
-import { Zap, Target, Expand, CircleCheck, Clock4, Users, ArrowRight, Shield, Lock, Eye } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Zap, Target, Expand, CircleCheck, Clock4, Users, Shield, Lock, Eye } from 'lucide-react'
 import CTASection from '../components/CTASection'
 import { projects } from '../data/projects'
 
-/* ── Feature cards ─────────────────────────────── */
 const features = [
-  { icon: Zap, color: 'text-accent-teal', bgFrom: '#12F2CD25', bgTo: '#12F2CD10', borderFrom: '#12F2CD40', title: 'Rapid Delivery', desc: 'Ship faster than competitors — weeks, not months' },
-  { icon: Target, color: 'text-accent-lime', bgFrom: '#F4FF0125', bgTo: '#F4FF0110', borderFrom: '#F4FF0140', title: 'Precision Execution', desc: 'Data-driven, no guesswork, exactly what you need' },
-  { icon: Expand, color: 'text-accent-pink', bgFrom: '#ff5ed126', bgTo: '#EA10AC10', borderFrom: '#EA10AC40', title: 'Smart Scalability', desc: 'MVP to enterprise — future-proofed from day one' },
-  { icon: CircleCheck, color: 'text-accent-purple', bgFrom: '#b983ff26', bgTo: '#690BE510', borderFrom: '#b780ff40', title: 'Proven Results', desc: 'Track record of measurable success' },
-  { icon: Clock4, color: 'text-accent-teal', bgFrom: '#12F2CD25', bgTo: '#12F2CD10', borderFrom: '#12F2CD40', title: 'Always Ready', desc: 'On standby 24/7, from kickoff to beyond launch' },
-  { icon: Users, color: 'text-accent-lime', bgFrom: '#F4FF0125', bgTo: '#F4FF0110', borderFrom: '#F4FF0140', title: 'Ownership', desc: 'Strategy → Design → Dev → Launch, one team' },
+  { icon: Zap, title: 'Rapid Delivery', desc: 'Ship faster than competitors — weeks, not months.' },
+  { icon: Target, title: 'Precision Execution', desc: 'Data-driven, no guesswork, exactly what you need.' },
+  { icon: Expand, title: 'Smart Scalability', desc: 'MVP to enterprise — future-proofed from day one.' },
+  { icon: CircleCheck, title: 'Proven Results', desc: 'Track record of measurable success.' },
+  { icon: Clock4, title: 'Always Ready', desc: 'On standby 24/7, from kickoff to beyond launch.' },
+  { icon: Users, title: 'Ownership', desc: 'Strategy → Design → Dev → Launch, one team.' },
 ]
 
-/* ── Service cards ─────────────────────────────── */
 const services = [
-  { title: 'Desktop Software', desc: 'Powerful AI-powered desktop applications built for performance and reliability.', image: '/images/generated-1773641564086.png', linkColor: 'text-accent-teal' },
-  { title: 'Mobile Application', desc: 'Native and cross-platform mobile apps designed for seamless user experience.', image: '/images/generated-1773641584592.png', linkColor: 'text-accent-lime' },
-  { title: 'Web Application', desc: 'Full-stack web applications with modern frameworks and cloud-native architecture.', image: '/images/generated-1773641600167.png', linkColor: 'text-accent-purple' },
+  { num: '01', title: 'Desktop Software', desc: 'Powerful AI-powered desktop applications built for performance and reliability.', image: '/images/generated-1773641564086.png' },
+  { num: '02', title: 'Mobile Application', desc: 'Native and cross-platform mobile apps designed for seamless user experience.', image: '/images/generated-1773641584592.png' },
+  { num: '03', title: 'Web Application', desc: 'Full-stack web applications with modern frameworks and cloud-native architecture.', image: '/images/generated-1773641600167.png' },
 ]
 
-/* ── Security features ─────────────────────────── */
 const securityFeatures = [
   { icon: Shield, text: 'End-to-end encryption & data protection' },
   { icon: Lock, text: 'Offline functionality for desktop applications' },
   { icon: Eye, text: 'Regular security audits & compliance checks' },
 ]
 
-/* ── Trusted client names ──────────────────────── */
-const clientRows = [
-  ['Tops', 'BTS', 'Central', 'LH BANK'],
-  ["Chester's", 'AXONS', 'Booking Hotel', 'Others'],
-]
-
-/* ═══════════════════════════════════════════════ */
+const clientNames = ['Tops', 'BTS', 'Central', 'LH BANK', "Chester's", 'AXONS', 'Booking Hotel']
 
 export default function Home() {
   return (
     <div className="pt-[72px]">
 
-      {/* ── Hero ── padding:[100,80] gap:60 horizontal ── */}
-      <section className="max-w-[1440px] mx-auto px-6 lg:px-20 py-16 lg:py-[100px]">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-[60px]">
-          {/* Left */}
-          <div className="flex-1 flex flex-col gap-6">
-            <span className="bg-white/[0.06] border border-white/[0.12] rounded-full px-5 py-2 text-accent-teal text-sm font-medium w-fit tracking-[1px]">
-              Digital Product Solutions
-            </span>
-            <div>
-              <h1 className="text-4xl lg:text-[48px] font-bold leading-[1.15]">Turning Your</h1>
-              <h1 className="text-4xl lg:text-[48px] font-bold leading-[1.15] text-accent-lime">Business Complexity</h1>
-              <h1 className="text-4xl lg:text-[48px] font-bold leading-[1.15]">Into Simplicity</h1>
-            </div>
-            <p className="text-text-muted text-base leading-[1.7] max-w-[500px]">
-              The digital product solutions, delivering precisely built, AI-powered software solutions with superior speed, transforming every customer's needs into measurable success.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-2">
-              <Link to="/contact" className="inline-flex items-center gap-2 bg-accent-lime text-bg-dark font-semibold px-9 py-4 rounded-3xl no-underline hover:brightness-110 transition">
-                Start Your Project <ArrowRight size={18} />
-              </Link>
-              <Link to="/works" className="inline-flex items-center gap-2 border border-border-subtle text-text-white font-medium px-9 py-4 rounded-3xl no-underline hover:bg-white/5 transition">
-                View Our Work
-              </Link>
-            </div>
-          </div>
-          {/* Right — image 500×400 rounded-20 */}
-          <div className="w-full lg:w-[500px] shrink-0">
-            <img src="/images/generated-1773641492288.png" alt="ACELLIQ Product" className="w-full h-[280px] lg:h-[400px] object-cover rounded-[20px]" />
-          </div>
-        </div>
-      </section>
+      {/* ═══ HERO — editorial, asymmetric ═══ */}
+      <section className="relative overflow-hidden">
+        {/* Subtle radial glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-accent-lime/[0.03] rounded-full blur-[120px] pointer-events-none" />
 
-      {/* ── Features ── padding:80 gap:48 vertical center ── */}
-      <section className="max-w-[1440px] mx-auto px-6 lg:px-20 py-16 lg:py-20">
-        <div className="flex flex-col items-center gap-12">
-          <h2 className="text-4xl lg:text-[48px] font-bold text-center">Fast. Precise. Results.</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {features.map((f) => (
-              <div
-                key={f.title}
-                className="rounded-[20px] p-8 flex flex-col gap-5"
-                style={{
-                  background: 'linear-gradient(180deg, #232838 0%, #1E2433 100%)',
-                  border: '1px solid transparent',
-                  borderImage: `linear-gradient(180deg, ${f.borderFrom} 0%, #2E344800 40%) 1`,
-                  borderImageSlice: 1,
-                }}
-              >
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center"
-                  style={{ background: `linear-gradient(180deg, ${f.bgFrom} 0%, ${f.bgTo} 100%)` }}
-                >
-                  <f.icon size={28} className={f.color} />
-                </div>
-                <h3 className="text-xl font-bold">{f.title}</h3>
-                <p className="text-[#8892B0] text-sm leading-[1.7]">{f.desc}</p>
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 pt-16 lg:pt-28 pb-20 lg:pb-36">
+          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+            {/* Left — large editorial type */}
+            <div className="flex-1 flex flex-col gap-8 lg:gap-10">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent-lime" />
+                <span className="text-text-muted text-sm font-medium">Digital Product Solutions</span>
               </div>
+
+              <h1 className="font-serif text-5xl sm:text-6xl lg:text-[80px] leading-[1.05] tracking-tight">
+                Turning your{' '}
+                <em className="text-accent-lime not-italic font-serif">complexity</em>
+                <br />into simplicity
+              </h1>
+
+              <p className="text-text-muted text-lg leading-relaxed max-w-[480px]">
+                We deliver precisely built, AI-powered software solutions with superior speed — transforming every customer's needs into measurable success.
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Link to="/contact" className="inline-flex items-center gap-2.5 bg-accent-lime text-bg-dark font-semibold text-[15px] px-8 py-4 rounded-full no-underline hover:brightness-110 transition-all">
+                  Start Your Project <ArrowRight size={18} />
+                </Link>
+                <Link to="/works" className="inline-flex items-center gap-2.5 border border-border-subtle text-text-white font-medium text-[15px] px-8 py-4 rounded-full no-underline hover:border-border-hover hover:bg-white/[0.02] transition-all">
+                  View Our Work
+                </Link>
+              </div>
+            </div>
+
+            {/* Right — hero image with editorial overlay */}
+            <div className="w-full lg:w-[520px] shrink-0 relative">
+              <img src="/images/generated-1773641492288.png" alt="ACELLIQ" className="w-full h-[320px] lg:h-[460px] object-cover rounded-2xl" />
+              {/* Floating stat card */}
+              <div className="absolute -bottom-6 -left-6 bg-bg-elevated border border-border-subtle rounded-xl px-5 py-4 backdrop-blur-sm">
+                <span className="text-accent-lime text-2xl font-bold tabular-nums">50+</span>
+                <p className="text-text-muted text-xs mt-1">Projects Delivered</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Trusted by — inline, minimal */}
+          <div className="flex flex-wrap items-center gap-6 lg:gap-10 mt-20 lg:mt-28 pt-10 border-t border-border-subtle">
+            <span className="text-text-dim text-xs font-medium tracking-widest">TRUSTED BY</span>
+            {clientNames.map((name) => (
+              <span key={name} className="text-text-dim text-sm font-medium hover:text-text-muted transition-colors">{name}</span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Services ── gradient bg, padding:80 gap:48 ── */}
-      <section style={{ background: 'linear-gradient(180deg, #1A1E2A 0%, #0F1520 100%)' }}>
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-16 lg:py-20">
-          <div className="flex flex-col items-center gap-12">
-            <h2 className="text-4xl lg:text-[48px] font-bold text-center">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-              {services.map((s) => (
-                <div key={s.title} className="rounded-[20px] bg-bg-card border border-border-subtle overflow-hidden flex flex-col h-[380px]">
-                  <div className="h-[200px] bg-cover bg-center" style={{ backgroundImage: `url(${s.image})` }} />
-                  <div className="flex-1 px-6 py-5 flex flex-col gap-3">
-                    <h3 className="text-xl font-semibold">{s.title}</h3>
-                    <p className="text-text-muted text-sm leading-[1.6]">{s.desc}</p>
-                    <Link to="/services" className={`${s.linkColor} text-[13px] font-medium no-underline mt-auto flex items-center gap-1.5 hover:gap-3 transition-all`}>
-                      Learn More <ArrowRight size={14} />
-                    </Link>
-                  </div>
+      {/* ═══ FEATURES — minimal grid ═══ */}
+      <section className="bg-dot-grid">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-20 lg:py-32">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+            {/* Left — editorial heading */}
+            <div className="lg:w-[400px] shrink-0">
+              <span className="text-accent-teal text-xs font-semibold tracking-widest">WHY US</span>
+              <h2 className="font-serif text-4xl lg:text-[52px] leading-[1.1] mt-4">
+                Fast. Precise.<br /><em className="text-accent-lime">Results.</em>
+              </h2>
+            </div>
+
+            {/* Right — feature grid */}
+            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-px bg-border-subtle rounded-2xl overflow-hidden">
+              {features.map((f) => (
+                <div key={f.title} className="bg-bg-dark p-8 flex flex-col gap-4 hover:bg-bg-card transition-colors">
+                  <f.icon size={22} className="text-accent-teal" />
+                  <h3 className="text-base font-semibold">{f.title}</h3>
+                  <p className="text-text-muted text-sm leading-relaxed">{f.desc}</p>
                 </div>
               ))}
             </div>
@@ -124,69 +111,117 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Portfolio ── padding:80 gap:48 ── */}
-      <section className="max-w-[1440px] mx-auto px-6 lg:px-20 py-16 lg:py-20">
-        <div className="flex flex-col items-center gap-12">
-          <h2 className="text-4xl lg:text-[48px] font-bold text-center">Successful Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {projects.map((p) => (
-              <Link key={p.slug} to={`/works/${p.slug}`} className="rounded-[20px] bg-bg-card border border-border-subtle overflow-hidden flex flex-col no-underline group">
-                <div className="h-[220px] bg-cover bg-center" style={{ backgroundImage: `url(${p.image})` }} />
-                <div className="px-6 py-5 flex flex-col gap-3">
-                  <span className={`${p.tagColor} text-[11px] font-semibold px-3 py-1 rounded-lg w-fit`}>{p.category}</span>
-                  <h3 className="text-lg font-semibold text-text-white">{p.title}</h3>
-                  <p className="text-text-muted text-[13px] leading-[1.6]">{p.description}</p>
-                  {p.cardStats && (
-                    <div className="flex gap-5 pt-2">
-                      {p.cardStats.map((stat) => (
-                        <span key={stat.text} className={`${stat.color} text-xs font-semibold`}>{stat.text}</span>
-                      ))}
-                    </div>
-                  )}
-                  <span className="bg-white/[0.06] border border-white/[0.09] rounded-[20px] px-4 py-2 text-white text-xs font-medium flex items-center gap-1.5 w-fit group-hover:bg-white/[0.12] transition">
-                    View Project <ArrowRight size={14} />
-                  </span>
-                </div>
+      {/* ═══ SERVICES — editorial numbered cards ═══ */}
+      <section>
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-20 lg:py-32">
+          <div className="flex flex-col gap-16">
+            {/* Header */}
+            <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6">
+              <div>
+                <span className="text-accent-lime text-xs font-semibold tracking-widest">SERVICES</span>
+                <h2 className="font-serif text-4xl lg:text-[52px] leading-[1.1] mt-4">What we <em className="text-accent-teal">build</em></h2>
+              </div>
+              <Link to="/services" className="text-text-muted text-sm font-medium flex items-center gap-1.5 hover:text-text-white transition-colors no-underline">
+                All Services <ArrowUpRight size={14} />
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* ── Security ── padding:80 gap:60 horizontal center ── */}
-      <section className="max-w-[1440px] mx-auto px-6 lg:px-20 py-16 lg:py-20">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-[60px]">
-          <img src="/images/generated-1773641621336.png" alt="Security" className="rounded-[20px] w-full lg:w-[560px] h-[280px] lg:h-[400px] shrink-0 object-cover" />
-          <div className="flex flex-col gap-6">
-            <h2 className="text-3xl lg:text-[42px] font-bold leading-tight">Security Software</h2>
-            <p className="text-text-muted text-base leading-[1.7]">
-              We build with security-first architecture. Every application undergoes rigorous testing, encryption protocols, and compliance audits to ensure your data and users are protected at all times.
-            </p>
-            <div className="flex flex-col gap-4">
-              {securityFeatures.map((sf) => (
-                <div key={sf.text} className="flex items-center gap-3">
-                  <sf.icon size={20} className="text-accent-teal shrink-0" />
-                  <span className="text-text-muted text-sm">{sf.text}</span>
-                </div>
+            {/* Service cards — large, editorial */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {services.map((s) => (
+                <Link key={s.num} to="/services" className="group rounded-2xl bg-bg-card border border-border-subtle overflow-hidden flex flex-col no-underline hover:border-border-hover transition-all">
+                  <div className="h-[220px] bg-cover bg-center relative" style={{ backgroundImage: `url(${s.image})` }}>
+                    <span className="absolute top-5 left-5 text-white/30 font-serif text-[56px] leading-none italic">{s.num}</span>
+                  </div>
+                  <div className="p-6 flex flex-col gap-3 flex-1">
+                    <h3 className="text-lg font-semibold text-text-white">{s.title}</h3>
+                    <p className="text-text-muted text-sm leading-relaxed">{s.desc}</p>
+                    <span className="text-accent-teal text-sm font-medium flex items-center gap-1.5 mt-auto pt-4 group-hover:gap-3 transition-all">
+                      Learn More <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Trusted Clients ── padding:[60,80] gap:36 ── */}
-      <section className="max-w-[1440px] mx-auto px-6 lg:px-20 py-10 lg:py-[60px]">
-        <div className="flex flex-col items-center gap-9">
-          <h2 className="text-3xl lg:text-[36px] font-bold text-center">Trusted Clients</h2>
-          {clientRows.map((row, i) => (
-            <div key={i} className="flex flex-wrap justify-center gap-6 lg:gap-10">
-              {row.map((name) => (
-                <div key={name} className="rounded-xl bg-white/[0.03] border border-white/[0.06] h-[70px] w-[140px] lg:w-[180px] flex items-center justify-center">
-                  <span className="text-white/60 text-base lg:text-xl font-bold tracking-[2px]">{name}</span>
-                </div>
+      {/* ═══ PORTFOLIO — magazine layout ═══ */}
+      <section className="bg-bg-card border-y border-border-subtle">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-20 lg:py-32">
+          <div className="flex flex-col gap-16">
+            {/* Header */}
+            <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6">
+              <div>
+                <span className="text-accent-lime text-xs font-semibold tracking-widest">PORTFOLIO</span>
+                <h2 className="font-serif text-4xl lg:text-[52px] leading-[1.1] mt-4">Selected <em className="text-accent-teal">work</em></h2>
+              </div>
+              <Link to="/works" className="text-text-muted text-sm font-medium flex items-center gap-1.5 hover:text-text-white transition-colors no-underline">
+                View All <ArrowUpRight size={14} />
+              </Link>
+            </div>
+
+            {/* Project grid — first row 2 cols, second row 3 cols for visual variety */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.slice(0, 6).map((p) => (
+                <Link key={p.slug} to={`/works/${p.slug}`} className="group rounded-2xl bg-bg-dark border border-border-subtle overflow-hidden flex flex-col no-underline hover:border-border-hover transition-all">
+                  <div className="h-[200px] bg-cover bg-center" style={{ backgroundImage: `url(${p.image})` }} />
+                  <div className="p-6 flex flex-col gap-3">
+                    <div className="flex items-center gap-3">
+                      <span className={`${p.tagColor} text-[11px] font-semibold px-2.5 py-1 rounded-md`}>{p.category}</span>
+                    </div>
+                    <h3 className="text-base font-semibold text-text-white">{p.title}</h3>
+                    <p className="text-text-muted text-[13px] leading-relaxed line-clamp-2">{p.description}</p>
+                    {p.cardStats && (
+                      <div className="flex gap-4 pt-1">
+                        {p.cardStats.map((stat) => (
+                          <span key={stat.text} className={`${stat.color} text-xs font-medium`}>{stat.text}</span>
+                        ))}
+                      </div>
+                    )}
+                    <span className="text-text-dim text-xs font-medium flex items-center gap-1.5 mt-2 group-hover:text-accent-lime transition-colors">
+                      View Project <ArrowUpRight size={12} />
+                    </span>
+                  </div>
+                </Link>
               ))}
             </div>
-          ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SECURITY — asymmetric editorial ═══ */}
+      <section>
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-20 lg:py-32">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            {/* Image */}
+            <div className="w-full lg:w-[520px] shrink-0 relative">
+              <img src="/images/generated-1773641621336.png" alt="Security" className="w-full h-[300px] lg:h-[420px] object-cover rounded-2xl" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-bg-dark/60 to-transparent" />
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 flex flex-col gap-6">
+              <span className="text-accent-teal text-xs font-semibold tracking-widest">SECURITY</span>
+              <h2 className="font-serif text-3xl lg:text-[44px] leading-[1.15]">
+                Built with <em className="text-accent-lime">security-first</em> architecture
+              </h2>
+              <p className="text-text-muted text-base leading-[1.7]">
+                Every application undergoes rigorous testing, encryption protocols, and compliance audits to ensure your data and users are protected at all times.
+              </p>
+              <div className="flex flex-col gap-5 pt-2">
+                {securityFeatures.map((sf) => (
+                  <div key={sf.text} className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-accent-teal/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <sf.icon size={16} className="text-accent-teal" />
+                    </div>
+                    <span className="text-text-muted text-sm leading-relaxed">{sf.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
